@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics.Contracts;
 
 namespace ConsoleApp1
 {
@@ -149,6 +150,93 @@ namespace ConsoleApp1
             }
             if (j == 0)
                 Console.WriteLine("Khong co ten loai hang can tim");
+        }
+    }
+    class HangHoa
+    {
+        string MaHang, TenHang, MaLoai;
+        int slgNhap, slgCo;
+        public string MaHang1 { get => MaHang; set => MaHang = value; }
+        public string MaLoai1 { get => MaLoai; set => MaLoai = value; }
+        public string TenHang1 { get => TenHang; set => TenHang = value; }
+        public int slgNhap1 { get => slgNhap; set => slgNhap = value; }
+        public int slgCo1 { get => slgCo; set => slgCo = value; }
+        public HangHoa()
+        {
+            MaHang = "";
+            TenHang = "";
+            MaLoai = "";
+            slgNhap = 0;
+            slgCo = 0;
+        }
+        public HangHoa(string MaHang, string TenHang, string MaLoai, int slgNhap, int slgCo)
+        {
+            this.MaHang = MaHang;
+            this.TenHang = TenHang;
+            this.MaLoai = MaLoai;
+            this.slgNhap = slgNhap;
+            this.slgCo = slgCo;
+        }
+        public void Nhap()
+        {
+            do
+            {
+                Console.Write("Nhap ma hang hoa: ");
+                MaHang = Console.ReadLine();
+            }
+            while (MaHang.Length == 0);
+            do
+            {
+                Console.Write("Nhap ten hang hoa: ");
+                TenHang= Console.ReadLine();
+            }
+            while (TenHang.Length == 0);
+            do
+            {
+                Console.Write("Nhap ma loai hang hoa: ");
+                MaLoai = Console.ReadLine();
+            }
+            while (MaLoai.Length == 0);
+            do
+            {
+                Console.Write("Nhap so luong nhap ve: ");
+                slgNhap = int.Parse(Console.ReadLine());
+            }
+            while (slgNhap < 0);
+            {
+                Console.Write("Nhap so luong hien co: ");
+                slgCo = int.Parse(Console.ReadLine());
+            }
+            while (slgCo < 0) ;
+        }
+        public void Hienthi()
+        {
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", MaHang, TenHang, MaLoai, slgNhap, slgCo);
+        }
+        public string Tostring()
+        {
+            return MaHang + " " + TenHang + " " + MaLoai + " " + slgNhap + " " + slgCo;
+        }
+    }
+    class DSHangHoa
+    {
+        List<HangHoa> ds = new List<HangHoa>();
+        public void DocTep()
+        {
+            StreamReader f = File.OpenText("HangHoa.txt");
+            string b;
+            while ((b = f.ReadLine()) != null)
+            {
+                HangHoa h = new HangHoa();
+                string[]a  = b.Split('#');
+                h.MaHang1 = a[0];
+                h.TenHang1 = a[1];
+                h.MaLoai1 = a[2];
+                h.slgNhap1 = int.Parse(a[3]);
+                h.slgCo1 = int.Parse(a[4]);
+                ds.Add(h);
+            }
+            f.Close();
         }
     }
 
