@@ -655,6 +655,162 @@ namespace ConsoleApp1
                 Console.WriteLine("Ten nhan vien khong ton tai");
         }
     }
+    class TinhLuong
+    {
+        string MaTL, MaNV;
+        int soNgay;
+        float thuong;
+        float lgCB;
+        float Thanhtien;
+        public string MaTL1 { get => MaTL; set => MaTL = value; }
+        public string MaNV1 { get => MaNV; set => MaNV = value; }
+        public int soNgay1 { get => soNgay; set => soNgay = value; }
+        public float thuong1 { get => thuong; set => thuong = value; }
+        public float lgCB1 { get => lgCB; set => lgCB = value; }
+        public float Thanhtien1 { get => Thanhtien; set => Thanhtien = value; }
+        public TinhLuong()
+        {
+            MaTL = "";
+            MaNV = "";
+            soNgay = 0;
+            thuong = lgCB= 0;
+        }
+        public TinhLuong(string MaTL,string MaNV, int soNgay, float thuong, float lgCB)
+        {
+            this.MaTL = MaTL;
+            this.MaNV = MaNV;
+            this.soNgay = soNgay;
+            this.thuong = thuong;
+            this.lgCB = lgCB;
+        }
+        public void Nhap()
+        {
+            Console.Write("Nhap ma tinh luong:");
+            MaTL = Console.ReadLine();
+            Console.Write("Nhap ma nhan vien:");
+            MaNV = Console.ReadLine();
+            Console.Write("Nhap so ngay lam viec:");
+            soNgay = int.Parse(Console.ReadLine());
+            Console.Write("Nhap thuong(neuco):");
+            thuong = float.Parse(Console.ReadLine());
+            Console.Write("Nhap luong co ban:");
+            lgCB = float.Parse(Console.ReadLine());
+        }
+        public float ThanhTien()
+        {
+            return (soNgay * lgCB) + thuong;
+        }
+        public void Hienthi()
+        {
+            Console.WriteLine("{0}\t{1)\t{2}\t{3}\t{4}\t{5}", MaTL, MaNV, soNgay, thuong, lgCB, ThanhTien());
+        }
+        public string Tostring()
+        {
+            return MaTL + " " + MaNV + " " + soNgay + " " + thuong + " " + lgCB + " " + ThanhTien();
+        }
+    }
+    class DSTL
+    {
+        List<TinhLuong> ds = new List<TinhLuong>();
+        public void Doctep()
+        {
+            StreamReader f = File.OpenText("TinhLuong.txt");
+            string b;
+            while ((b = f.ReadLine()) != null)
+            {
+                TinhLuong tl = new TinhLuong();
+                string[] a = b.Split('#');
+                tl.MaTL1 = a[0];
+                tl.MaNV1 = a[1];
+                tl.soNgay1 = int.Parse(a[2]);
+                tl.thuong1 = float.Parse(a[3]);
+                tl.lgCB1 = float.Parse(a[4]);
+                tl.ThanhTien();
+                ds.Add(tl);
+            }
+            f.Close();
+        }
+        public void ghitep()
+        {
+            StreamWriter f = new StreamWriter("DSTL.txt");
+            for (int i = 0; i < ds.Count; i++)
+                f.WriteLine(ds[i].Tostring());
+            f.Close();
+        }
+        public void Hienthi()
+        {
+            for (int i = 0; i < ds.Count; i++)
+                ds[i].Hienthi();
+        }
+        public void Sua()
+        {
+            string x;
+            int y;
+            int j = 0;
+            Console.Write("Nhap ma tinh luong can sua: ");
+            x = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                if (ds[i].MaTL1.IndexOf(x) >= 0)
+                {
+                    j = 1;
+                    Console.WriteLine("Nhap so ngay lam viec can sua: ");
+                    y = int.Parse(Console.ReadLine());
+                    ds[i].soNgay1 = y;
+                }
+            }
+            if (j == 0)
+            {
+                Console.WriteLine("Khong ton tai ma tinh luong nay trong danh sach");
+            }
+        }
+    }
+    class GiaBan
+    {
+        string MaHang, dvi;
+        int gia;
+        DateTime ngayAD, ngayKT;
+        public string MaHang1 { get => MaHang; set => MaHang = value; }
+        public string dvi1 { get => dvi; set => dvi = value; }
+        public int gia1 { get => gia; set => gia = value; }
+        public DateTime ngayAD1 { get => ngayAD; set => ngayAD = value; }
+        public DateTime ngayKT1 { get => ngayKT; set => ngayKT = value; }
+        public GiaBan()
+        {
+            MaHang = "";
+            dvi = "";
+            gia = 0;
+        }
+        public GiaBan(string MaHang, string dvi, int gia, DateTime ngayAD, DateTime ngayKT)
+        {
+            this.MaHang = MaHang;
+            this.dvi = dvi;
+            this.gia = gia;
+            this.ngayAD = ngayAD;
+            this.ngayKT = ngayKT;
+        }
+        public void Nhap()
+        {
+            Console.Write("Nhap ma hang:");
+            MaHang = Console.ReadLine();
+            Console.Write("Nhap don vi tinh:");
+            dvi = Console.ReadLine();
+            Console.Write("Nhap gia ban:");
+            gia = int.Parse(Console.ReadLine());
+            Console.Write("Nhap ngay ap dung:");
+            ngayAD = DateTime.Parse(Console.ReadLine());
+            Console.Write("Nhap ngay ket thuc:");
+            ngayKT = DateTime.Parse(Console.ReadLine());
+        }
+        public void Hienthi()
+        {
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", MaHang, dvi, gia, ngayAD, ngayKT);
+        }
+        public string Tostring()
+        {
+            return MaHang + " " + dvi + " " + gia + " " + ngayAD + " " + ngayKT;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
