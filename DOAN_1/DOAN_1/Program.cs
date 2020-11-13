@@ -811,6 +811,246 @@ namespace ConsoleApp1
             return MaHang + " " + dvi + " " + gia + " " + ngayAD + " " + ngayKT;
         }
     }
+    class DSGB
+    {
+        List<GiaBan> ds = new List<GiaBan>();
+        public void Doctep()
+        {
+            StreamReader f = File.OpenText("GiaBan.txt");
+            string b;
+            while ((b = f.ReadLine()) != null)
+            {
+                GiaBan g = new GiaBan();
+                string[] a = b.Split('#');
+                g.MaHang1 = a[0];
+                g.dvi1 = a[1];
+                g.gia1 = int.Parse(a[2]);
+                g.ngayAD1 = DateTime.Parse(a[3]);
+                g.ngayKT1 = DateTime.Parse(a[4]);
+                ds.Add(g);
+            }
+            f.Close();
+        }
+        public void ghitep()
+        {
+            StreamWriter f = new StreamWriter("DSGB.txt");
+            for (int i = 0; i < ds.Count; i++)
+                f.WriteLine(ds[i].Tostring());
+            f.Close();
+        }
+        public void Hienthi()
+        {
+            for (int i = 0; i < ds.Count; i++)
+                ds[i].Hienthi();
+        }
+        public void Sua()
+        {
+            string x;
+            int y;
+            int j = 0;
+            Console.Write("Nhap ma hang can sua: ");
+            x = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                if (ds[i].MaHang1.IndexOf(x) >= 0)
+                {
+                    j = 1;
+                    Console.WriteLine("Nhap gia can sua: ");
+                    y = int.Parse(Console.ReadLine());
+                    ds[i].gia1 = y;
+                }
+            }
+            if (j == 0)
+            {
+                Console.WriteLine("Khong ton tai ma hang nay trong danh sach");
+            }
+        }
+    }
+    class HDnhap
+    {
+        string MaHDnhap, tenNVgiao, maNCC;
+        int tongTien, VAT;
+        public string MaHDnhap1 { get => MaHDnhap; set => MaHDnhap = value; }
+        public string tenNVgiao1 { get => tenNVgiao; set => tenNVgiao = value; }
+        public string maNCC1 { get => maNCC; set => maNCC = value; }
+        public int tongTien1 { get => tongTien; set => tongTien = value; }
+        public int VAT1 { get => VAT; set => VAT = value; }
+        public HDnhap()
+        {
+            MaHDnhap = "";
+            tenNVgiao = "";
+            maNCC = "";
+            tongTien = 0;
+            VAT = 0;
+        }
+        public HDnhap(string MaHDnhap, string tenNVgiao, string maNCC, int tongTien, int VAT)
+        {
+            this.MaHDnhap = MaHDnhap;
+            this.tenNVgiao = tenNVgiao;
+            this.maNCC = maNCC;
+            this.tongTien = tongTien;
+            this.VAT = VAT;
+        }
+        public void Nhap()
+        {
+            Console.Write("Nhap ma hoa don nhap:");
+            MaHDnhap = Console.ReadLine();
+            Console.Write("Nhap ten nhan vien giao:");
+            tenNVgiao = Console.ReadLine();
+            Console.Write("Nhap ma nha cung cap:");
+            maNCC = Console.ReadLine();
+            Console.Write("Nhap tong tien:");
+            tongTien = int.Parse(Console.ReadLine());
+            Console.Write("Nhap VAT:");
+            VAT = int.Parse(Console.ReadLine());
+        }
+        public void Hienthi()
+        {
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", MaHDnhap, tenNVgiao, maNCC, tongTien, VAT);
+        }
+        public string Tostring()
+        {
+            return MaHDnhap + " " + tenNVgiao + " " + maNCC + " " + tongTien + " " + VAT;
+        }
+    }
+    class DSHDN
+    {
+        List<HDnhap> ds = new List<HDnhap>();
+        public void Doctep()
+        {
+            StreamReader f = File.OpenText("HDnhap.txt");
+            string b;
+            while ((b = f.ReadLine()) != null)
+            {
+                HDnhap n = new HDnhap();
+                string[] a = b.Split('#');
+                n.MaHDnhap1 = a[0];
+                n.tenNVgiao1 = a[1];
+                n.maNCC1 = a[2];
+                n.tongTien1 = int.Parse(a[3]);
+                n.VAT1 = int.Parse(a[4]);
+                ds.Add(n);
+            }
+            f.Close();
+        }
+        public void ghitep()
+        {
+            StreamWriter f = new StreamWriter("DSHDN.txt");
+            for (int i = 0; i < ds.Count; i++)
+                f.WriteLine(ds[i].Tostring());
+            f.Close();
+        }
+        public void Hienthi()
+        {
+            for (int i = 0; i < ds.Count; i++)
+                ds[i].Hienthi();
+        }
+        public void Them()
+        {
+            HDnhap n = new HDnhap();
+            n.Nhap();
+            ds.Add(n);
+        }
+        public void Sua()
+        {
+            string x;
+            int y;
+            int j = 0;
+            Console.Write("Nhap ma hoa don nhap can sua: ");
+            x = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                if (ds[i].MaHDnhap1.IndexOf(x) >= 0)
+                {
+                    j = 1;
+                    Console.WriteLine("Nhap tong tien can sua: ");
+                    y = int.Parse(Console.ReadLine());
+                    ds[i].tongTien1 = y;
+                }
+            }
+            if (j == 0)
+            {
+                Console.WriteLine("Khong ton tai ma hoa don nhap nay trong danh sach");
+            }
+        }
+        public void Xoa()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hoa don nhap can xoa: ");
+            string a = Console.ReadLine();
+            int b = int.Parse(Console.ReadLine());
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].MaHDnhap1) >= 0)
+                {
+                    ds.Remove(ds[i]);
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hoa don nhap khong ton tai");
+        }
+        public void TimkiemMaHDnhap()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hoa don nhap can tim kiem: ");
+            string a = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].MaHDnhap1) >= 0)
+                {
+                    ds[i].Hienthi();
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hoa don nhap khong ton tai");
+        }
+    }
+    class HangNhap
+    {
+        string maHangnhap;
+        int slgnhap, dgianhap;
+        DateTime ngaysx, ngayhh;
+        public string maHangnhap1 { get => maHangnhap; set => maHangnhap = value; }
+        public int slgnhap1 { get => slgnhap; set => slgnhap = value; }
+        public int dgianhap1 { get => dgianhap; set => dgianhap = value; }
+        public DateTime ngaysx1 { get => ngaysx; set => ngaysx = value; }
+        public DateTime ngayhh1 { get => ngayhh; set => ngayhh = value; }
+        public HangNhap()
+        {
+            maHangnhap = "";
+            slgnhap = 0;
+            dgianhap = 0;
+        }
+        public HangNhap(string maHangnhap, int slgnhap, int dgianhap)
+        {
+            this.maHangnhap = maHangnhap;
+            this.slgnhap = slgnhap;
+            this.dgianhap = dgianhap;
+        }
+        public void Nhap()
+        {
+            Console.Write("Nhap ma hang nhap:");
+            maHangnhap = Console.ReadLine();
+            Console.Write("Nhap so luong nhap:");
+            slgnhap = int.Parse(Console.ReadLine());
+            Console.Write("Nhap don gia nhap:");
+            dgianhap = int.Parse(Console.ReadLine());
+            Console.Write("Nhap ngay san xuat:");
+            ngaysx = DateTime.Parse(Console.ReadLine());
+            Console.Write("Nhap ngay het han:");
+            ngayhh = DateTime.Parse(Console.ReadLine());
+        }
+        public void Hienthi()
+        {
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", maHangnhap, slgnhap, dgianhap, ngaysx, ngayhh);
+        }
+        public string Tostring()
+        {
+            return maHangnhap + " " + slgnhap + " " + dgianhap + " " + ngaysx + " " + ngayhh;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
