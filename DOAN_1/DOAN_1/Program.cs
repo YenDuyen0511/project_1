@@ -1051,6 +1051,369 @@ namespace ConsoleApp1
             return maHangnhap + " " + slgnhap + " " + dgianhap + " " + ngaysx + " " + ngayhh;
         }
     }
+    class DSHN
+    {
+        List<HangNhap> ds = new List<HangNhap>();
+        public void Doctep()
+        {
+            StreamReader f = File.OpenText("HangNhap.txt");
+            string b;
+            while ((b = f.ReadLine()) != null)
+            {
+                HangNhap hn = new HangNhap();
+                string[] a = b.Split('#');
+                hn.maHangnhap1 = a[0];
+                hn.slgnhap1 = int.Parse(a[1]);
+                hn.dgianhap1 = int.Parse(a[2]);
+                hn.ngaysx1= DateTime.Parse(a[3]);
+                hn.ngayhh1 = DateTime.Parse(a[4]);
+                ds.Add(hn);
+            }
+            f.Close();
+        }
+        public void ghitep()
+        {
+            StreamWriter f = new StreamWriter("DSHN.txt");
+            for (int i = 0; i < ds.Count; i++)
+                f.WriteLine(ds[i].Tostring());
+            f.Close();
+        }
+        public void Hienthi()
+        {
+            for (int i = 0; i < ds.Count; i++)
+                ds[i].Hienthi();
+        }
+        public void Them()
+        {
+            HangNhap hn = new HangNhap();
+            hn.Nhap();
+            ds.Add(hn);
+        }
+        public void Sua()
+        {
+            string x;
+            int y;
+            int j = 0;
+            Console.Write("Nhap ma hang nhap can sua: ");
+            x = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                if (ds[i].maHangnhap1.IndexOf(x) >= 0)
+                {
+                    j = 1;
+                    Console.WriteLine("Nhap so luong nhap can sua: ");
+                    y = int.Parse(Console.ReadLine());
+                    ds[i].slgnhap1 = y;
+                }
+            }
+            if (j == 0)
+            {
+                Console.WriteLine("Khong ton tai ma hang nhap nay trong danh sach");
+            }
+        }
+        public void Xoa()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hang nhap can xoa: ");
+            string a = Console.ReadLine();
+            int b = int.Parse(Console.ReadLine());
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].maHangnhap1) >= 0)
+                {
+                    ds.Remove(ds[i]);
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hang nhap khong ton tai");
+        }
+        public void TimkiemMaHangnhap()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hang nhap can tim kiem: ");
+            string a = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].maHangnhap1) >= 0)
+                {
+                    ds[i].Hienthi();
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hang nhap khong ton tai");
+        }
+    }
+    class HDban
+    {
+        string maHDban, manv;
+        DateTime ngayBan;
+        int thanhTien, ckhau;
+        public string maHDban1 { get => maHDban; set => maHDban = value; }
+        public string manv1 { get => manv; set => manv = value; }
+        public DateTime ngayBan1 { get => ngayBan; set => ngayBan = value; }
+        public int thanhTien1 { get => thanhTien; set => thanhTien = value; }
+        public int ckhau1 { get => ckhau; set => ckhau = value; }
+        public HDban()
+        {
+            maHDban = "";
+            manv = "";
+            thanhTien = 0;
+            ckhau = 0;
+        }
+        public HDban(string maHDban, string manv, DateTime ngayBan, int thanhTien, int ckhau)
+        {
+            this.maHDban = maHDban;
+            this.manv = manv;
+            this.ngayBan = ngayBan;
+            this.thanhTien = thanhTien;
+            this.ckhau = ckhau;
+        }
+        public void Nhap()
+        {
+            Console.Write("Nhap ma hoa don ban:");
+            maHDban = Console.ReadLine();
+            Console.Write("Nhap ma nhan vien:");
+            manv = Console.ReadLine();
+            Console.Write("Nhap ngay ban:");
+            ngayBan= DateTime.Parse(Console.ReadLine());
+            Console.Write("Nhap thanh tien:");
+            thanhTien = int.Parse(Console.ReadLine());
+            Console.Write("Nhap chiet khau:");
+            ckhau = int.Parse(Console.ReadLine());
+        }
+        public void Hienthi()
+        {
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", maHDban, manv, ngayBan, thanhTien, ckhau); 
+        }
+        public string Tostring()
+        {
+            return maHDban + " " + manv + " " + ngayBan + " " + thanhTien + " " + ckhau;
+        }
+    }
+    class DSHDB
+    {
+        List<HDban> ds = new List<HDban>();
+        public void Doctep()
+        {
+            StreamReader f = File.OpenText("HoaDonBan.txt");
+            string b;
+            while ((b = f.ReadLine()) != null)
+            {
+                HDban c = new HDban();
+                string[] a = b.Split('#');
+                c.maHDban1 = a[0];
+                c.manv1 = a[1];
+                c.ngayBan1 = DateTime.Parse(a[2]);
+                c.thanhTien1 = int.Parse(a[3]);
+                c.ckhau1 = int.Parse(a[4]);
+                ds.Add(c);
+            }
+            f.Close();
+        }
+        public void ghitep()
+        {
+            StreamWriter f = new StreamWriter("DSHDB.txt");
+            for (int i = 0; i < ds.Count; i++)
+                f.WriteLine(ds[i].Tostring());
+            f.Close();
+        }
+        public void Hienthi()
+        {
+            for (int i = 0; i < ds.Count; i++)
+                ds[i].Hienthi();
+        }
+        public void Them()
+        {
+            HDban c = new HDban();
+            c.Nhap();
+            ds.Add(c);
+        }
+        public void Sua()
+        {
+            string x;
+            int y;
+            int j = 0;
+            Console.Write("Nhap ma hoa don ban can sua: ");
+            x = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                if (ds[i].maHDban1.IndexOf(x) >= 0)
+                {
+                    j = 1;
+                    Console.WriteLine("Nhap thanh tien can sua: ");
+                    y = int.Parse(Console.ReadLine());
+                    ds[i].thanhTien1 = y;
+                }
+            }
+            if (j == 0)
+            {
+                Console.WriteLine("Khong ton tai ma hoa don ban nay trong danh sach");
+            }
+        }
+        public void Xoa()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hoa don ban can xoa: ");
+            string a = Console.ReadLine();
+            int b = int.Parse(Console.ReadLine());
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].maHDban1) >= 0)
+                {
+                    ds.Remove(ds[i]);
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hoa don ban khong ton tai");
+        }
+        public void TimkiemMaHDban()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hoa don ban can tim kiem: ");
+            string a = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].maHDban1) >= 0)
+                {
+                    ds[i].Hienthi();
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hoa don ban khong ton tai");
+        }
+    }
+    class HangBan
+    {
+        string maHangban;
+        int slg, gia;
+        public string maHangban1 { get => maHangban; set => maHangban = value; }
+        public int slg1 { get => slg; set => slg = value; }
+        public int gia1 { get => gia; set => gia = value; }
+        public HangBan()
+        {
+            maHangban = " ";
+            slg = gia = 0;
+        }
+        public HangBan(string maHangban, int slg, int gia)
+        {
+            this.maHangban = maHangban;
+            this.slg = slg;
+            this.gia = gia;
+        }
+        public void Nhap()
+        {
+            Console.Write("Nhap ma hang ban:");
+            maHangban = Console.ReadLine();
+            Console.Write("Nhap so luong ban:");
+            slg = int.Parse(Console.ReadLine());
+            Console.Write("Nhap gia:");
+            gia = int.Parse(Console.ReadLine());
+        }
+        public void Hienthi()
+        {
+            Console.WriteLine("{0}\t{1}\t{2}", maHangban, slg, gia);
+        }
+        public string Tostring()
+        {
+            return maHangban + " " + slg + " " + gia;
+        }
+    }
+    class DSHB
+    {
+        List<HangBan> ds = new List<HangBan>();
+        public void Doctep()
+        {
+            StreamReader f = File.OpenText("HangBan.txt");
+            string b;
+            while ((b = f.ReadLine()) != null)
+            {
+                HangBan hb = new HangBan();
+                string[] a = b.Split('#');
+                hb.maHangban1 = a[0];
+                hb.slg1 = int.Parse(a[1]);
+                hb.gia1 = int.Parse(a[2]);
+                ds.Add(hb);
+            }
+            f.Close();
+        }
+        public void ghitep()
+        {
+            StreamWriter f = new StreamWriter("DSHB.txt");
+            for (int i = 0; i < ds.Count; i++)
+                f.WriteLine(ds[i].Tostring());
+            f.Close();
+        }
+        public void Hienthi()
+        {
+            for (int i = 0; i < ds.Count; i++)
+                ds[i].Hienthi();
+        }
+        public void Them()
+        {
+            HangBan hb = new HangBan();
+            hb.Nhap();
+            ds.Add(hb);
+        }
+        public void Sua()
+        {
+            string x;
+            int y;
+            int j = 0;
+            Console.Write("Nhap ma hang ban can sua: ");
+            x = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                if (ds[i].maHangban1.IndexOf(x) >= 0)
+                {
+                    j = 1;
+                    Console.WriteLine("Nhap so luong can sua: ");
+                    y = int.Parse(Console.ReadLine());
+                    ds[i].slg1 = y;
+                }
+            }
+            if (j == 0)
+            {
+                Console.WriteLine("Khong ton tai ma hang ban nay trong danh sach");
+            }
+        }
+        public void Xoa()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hang ban can xoa: ");
+            string a = Console.ReadLine();
+            int b = int.Parse(Console.ReadLine());
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].maHangban1) >= 0)
+                {
+                    ds.Remove(ds[i]);
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hang ban khong ton tai");
+        }
+        public void TimkiemMaHangban()
+        {
+            int f = 0;
+            Console.Write("Nhap ma hang ban can tim kiem: ");
+            string a = Console.ReadLine();
+            for (int i = 0; i < ds.Count; i++)
+            {
+                f = 1;
+                if (a.IndexOf(ds[i].maHangban1) >= 0)
+                {
+                    ds[i].Hienthi();
+                }
+            }
+            if (f == 0)
+                Console.WriteLine("Ma hang ban khong ton tai");
+        }
+    }
     class Program
     {
         static void Main(string[] args)
