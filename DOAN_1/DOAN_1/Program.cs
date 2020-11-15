@@ -1416,9 +1416,138 @@ namespace ConsoleApp1
     }
     class Program
     {
+        static void Chon(out int a)
+        {
+            do
+            {
+                Console.WriteLine("1.Quan ly loai hang.");
+                Console.WriteLine("2.Quan ly hang hoa.");
+                Console.WriteLine("3.Quan ly nha cung cap.");
+                Console.WriteLine("4.Quan ly nhan vien.");
+                Console.WriteLine("5.Quan ly tinh luong.");
+                Console.WriteLine("6.Quan ly gia ban.");
+                Console.WriteLine("8.Quan ly hoa don nhap.");
+                Console.WriteLine("9.Quan ly hang nhap.");
+                Console.WriteLine("10.Quan ly hoa don ban.");
+                Console.WriteLine("11.Quan ly hang ban.");
+                Console.Write("Xin moi chon: ");
+                a = int.Parse(Console.ReadLine());
+                if (a > 11 || a < 1)
+                    Console.WriteLine("vui long nhap lai");
+            }
+            while (a > 11 || a < 1);
+        }
         static void Main(string[] args)
         {
-
+            do
+            {
+                Chon(out int a);
+                if (a == 1)
+                {
+                    string x;
+                    Console.OutputEncoding = Encoding.UTF8;
+                    DSLoaiHang ds1 = new DSLoaiHang();
+                    ds1.DocTep();
+                    do
+                    {
+                        Console.WriteLine("1. Hien thi DSLoaiHang");
+                        Console.WriteLine("2. Sua 1 loai hang");
+                        Console.WriteLine("3. Them 1 loai hang ");
+                        Console.WriteLine("4. Tim kiem ma loai hang");
+                        Console.WriteLine("5. Tim kiem ten loai hang");
+                        Console.WriteLine("6. Xoa 1 loai hang");
+                        Console.WriteLine("7. Ghi tep");
+                        Console.WriteLine("8. Thoat");
+                        Console.Write("Chon : ");
+                        x = Console.ReadLine();
+                        switch (int.Parse(x))
+                        {
+                            case 1:
+                                ds1.Hienthi(); Console.ReadKey();
+                                break;
+                            case 2:
+                                ds1.Sua(); ds1.Hienthi(); Console.ReadKey();
+                                break;
+                            case 3:
+                                ds1.Nhap(); ds1.Hienthi(); Console.ReadKey();
+                                break;
+                            case 4:
+                                ds1.TimkiemMaLoai(); Console.ReadKey();
+                                break;
+                            case 5:
+                                ds1.TimkiemTenLoai(); Console.ReadKey();
+                                break;
+                            case 6:
+                                ds1.Xoa(); ds1.Hienthi(); Console.ReadKey();
+                                break;
+                            case 7:
+                                ds1.ghitep();
+                                break;
+                            case 8:
+                                Environment.Exit(0);
+                                break;
+                        }
+                        Console.Clear();
+                    }
+                    while (x.Length != 0);
+                }
+                else
+                {
+                    if (a == 2)
+                    {
+                        string y;
+                        Console.OutputEncoding = Encoding.UTF8;
+                        DSHangHoa ds2 = new DSHangHoa();
+                        ds2.DocTep();
+                        do
+                        {
+                            Console.WriteLine("1. Hien thi DSHH");
+                            Console.WriteLine("2. Sua so luong nhap ve");
+                            Console.WriteLine("3. Sua so luong hien co");
+                            Console.WriteLine("4. Them 1 hang hoa");
+                            Console.WriteLine("5. Tim kiem ma hang hoa");
+                            Console.WriteLine("6. Tim kiem ten hang hoa");
+                            Console.WriteLine("7. Xoa 1 hang hoa");
+                            Console.WriteLine("8. Ghi tep");
+                            Console.WriteLine("9. Thoat");
+                            Console.Write("chon : ");
+                            y = Console.ReadLine();
+                            switch (int.Parse(y))
+                            {
+                                case 1:
+                                    ds2.Hienthi(); Console.ReadKey();
+                                    break;
+                                case 2:
+                                    ds2.Suaslnv(); ds2.Hienthi(); Console.ReadKey();
+                                    break;
+                                case 3:
+                                    ds2.Suaslhc(); ds2.Hienthi(); Console.ReadKey();
+                                    break;
+                                case 4:
+                                    ds2.Them(); ds2.Hienthi(); Console.ReadKey();
+                                    break;
+                                case 5:
+                                    ds2.TimkiemMaHang(); Console.ReadKey();
+                                    break;
+                                case 6:
+                                    ds2.TimkiemTenHang(); Console.ReadKey();
+                                    break;
+                                case 7:
+                                    ds2.Xoa(); ds2.Hienthi(); Console.ReadKey();
+                                    break;
+                                case 8:
+                                    ds2.ghitep();
+                                    break;
+                                case 9:
+                                    Environment.Exit(0);
+                                    break;
+                            }
+                            Console.Clear();
+                        }
+                        while (y.Length != 0);
+                    }
+                }
+            }
         }
     }
 }
