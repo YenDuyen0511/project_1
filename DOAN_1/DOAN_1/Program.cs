@@ -1435,7 +1435,7 @@ namespace ConsoleApp1
                 if (a > 11 || a < 1)
                     Console.WriteLine("vui long nhap lai");
             }
-            while (a > 11 || a < 1);
+            while (a < 11 || a > 1);
         }
         static void Main(string[] args)
         {
