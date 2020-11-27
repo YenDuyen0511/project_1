@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Đồ_án_1___Lê_Đặng_Yến_Duyên</RootNamespace>
   </PropertyGroup>
 
 </Project>

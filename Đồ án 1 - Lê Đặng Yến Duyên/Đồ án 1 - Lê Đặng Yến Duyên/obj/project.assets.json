@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\project_1\\project_1\\DOAN_1\\DOAN_1\\DOAN_1.csproj",
-      "projectName": "DOAN_1",
-      "projectPath": "D:\\project_1\\project_1\\DOAN_1\\DOAN_1\\DOAN_1.csproj",
+      "projectUniqueName": "D:\\project_1\\project_1\\Đồ án 1 - Lê Đặng Yến Duyên\\Đồ án 1 - Lê Đặng Yến Duyên\\Đồ án 1 - Lê Đặng Yến Duyên.csproj",
+      "projectName": "Đồ án 1 - Lê Đặng Yến Duyên",
+      "projectPath": "D:\\project_1\\project_1\\Đồ án 1 - Lê Đặng Yến Duyên\\Đồ án 1 - Lê Đặng Yến Duyên\\Đồ án 1 - Lê Đặng Yến Duyên.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\project_1\\project_1\\DOAN_1\\DOAN_1\\obj\\",
+      "outputPath": "D:\\project_1\\project_1\\Đồ án 1 - Lê Đặng Yến Duyên\\Đồ án 1 - Lê Đặng Yến Duyên\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
