@@ -6,4 +6,9 @@
     <RootNamespace>Đồ_án_1___Lê_Đặng_Yến_Duyên</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="BusinessLayer\" />
+    <Folder Include="Presentation\" />
+  </ItemGroup>
+
 </Project>
