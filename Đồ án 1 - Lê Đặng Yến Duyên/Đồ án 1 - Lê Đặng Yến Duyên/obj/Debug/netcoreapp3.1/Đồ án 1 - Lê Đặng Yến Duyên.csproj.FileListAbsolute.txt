@@ -1,0 +1,13 @@
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\bin\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.exe
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\bin\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.deps.json
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\bin\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.runtimeconfig.json
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\bin\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.runtimeconfig.dev.json
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\bin\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.dll
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\bin\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.pdb
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.csprojAssemblyReference.cache
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.AssemblyInfoInputs.cache
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.AssemblyInfo.cs
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.csproj.CoreCompileInputs.cache
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.dll
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.pdb
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\Đồ án 1 - Lê Đặng Yến Duyên.genruntimeconfig.cache

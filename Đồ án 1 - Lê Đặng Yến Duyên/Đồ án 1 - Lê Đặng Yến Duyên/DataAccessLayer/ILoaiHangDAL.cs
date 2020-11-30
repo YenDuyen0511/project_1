@@ -10,7 +10,7 @@ namespace LoaiHang.DataAccessLayer
     public interface ILoaiHangDAL
     {
         List<loaihang> GetAllLoaihang();
-        void ThemLoaiHang(loaihang lh);
+        void ThemLoaihang(loaihang lh);
         void Update(List<loaihang> list);
     }
 }

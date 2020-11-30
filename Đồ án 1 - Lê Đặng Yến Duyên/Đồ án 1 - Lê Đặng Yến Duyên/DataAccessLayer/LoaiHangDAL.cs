@@ -28,7 +28,7 @@ namespace LoaiHang.DataAccessLayer
             fread.Close();
             return list;
         }
-        public void ThemLoaiHang(loaihang lh)
+        public void ThemLoaihang(loaihang lh)
         {
             string maLoai = "ML" + DateTime.Now.ToString("yyMMddhhmmss");
             StreamWriter fwrite = File.AppendText(txtfile);
