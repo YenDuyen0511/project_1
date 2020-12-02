@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Ultity\" />
-    <Folder Include="Presentation\" />
   </ItemGroup>
 
 </Project>

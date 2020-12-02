@@ -7,7 +7,7 @@ namespace HangNhap.BusinessLayer
 {
     public interface IHangNhapBLL
     {
-        List<hangNhap> GetAllHangnhao();
+        List<hangNhap> GetAllHangnhap();
         void ThemHangnhap(hangNhap hn);
         void SuaHangnhap(hangNhap hn);
         void XoaHangnhap(string mahn);
