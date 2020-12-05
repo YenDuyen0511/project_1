@@ -14,6 +14,7 @@ namespace HangNhap.Entities
         public int donGia { get => dongia; set => dongia = value; }
         public DateTime ngaySX { get => ngaysx; set => ngaysx = value; }
         public DateTime ngayHH { get => ngayhh; set => ngayhh = value; }
+        public hangNhap() { }
         public hangNhap(hangNhap hn)
         {
             this.mahn = hn.mahn;

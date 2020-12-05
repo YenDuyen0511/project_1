@@ -13,6 +13,7 @@ namespace HoaDonNhap.Entities
         public string maNcc { get => mancc; set => mancc = value; }
         public int Tong { get => tong; set => tong = value; }
         public int VAT { get => vat; set => vat = value; }
+        public hoadonNhap() { }
         public hoadonNhap(hoadonNhap hdn)
         {
             this.mahdn = hdn.mahdn;

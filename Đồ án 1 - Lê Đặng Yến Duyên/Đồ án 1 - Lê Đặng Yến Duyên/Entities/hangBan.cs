@@ -11,6 +11,7 @@ namespace HangBan.Entities
         public string maHb { get => mahb; set => mahb = value; }
         public int sLg { get => slg; set => slg = value; }
         public int Gia { get => gia; set => gia = value; }
+        public hangBan() { }
         public hangBan(hangBan hb)
         {
             this.mahb = hb.mahb;

@@ -12,6 +12,7 @@ namespace Loaihang.Entities
         public string maLoai { get => maloai; set => maloai = value; }
         public string tenLoai { get => tenloai; set => tenloai = value; }
         public string mauSac { get => mausac; set => mausac = value; }
+        public loaihang() { }
         public loaihang(loaihang lh)
         {
             this.maloai = lh.maloai;

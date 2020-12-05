@@ -13,6 +13,7 @@ namespace NhanVien.Entities
         public string Pass { get => pass; set => pass = value; }
         public string loaiNv { get => loainv; set => loainv = value; }
         public DateTime ngayLam { get => ngaylam; set => ngaylam = value; }
+        public nhanvien() { }
         public nhanvien(nhanvien nv)
         {
             this.manv = nv.manv;

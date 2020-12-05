@@ -15,6 +15,7 @@ namespace TinhLuong.Entities
         public double Thuong { get => thuong; set => thuong = value; }
         public double lgCb { get => lgcb; set => lgcb = value; }
         public double thanhTien { get => thanhtien; set => thanhtien = value; }
+        public tinhluong() { }
         public tinhluong(tinhluong tl)
         {
             this.matl = tl.matl;

@@ -9,6 +9,7 @@ namespace DangNhap.Entities
         private string user, password;
         public string User { get => user; set => user = value; }
         public string Password { get => password; set => password = value; }
+        public dangNhap() { }
         public dangNhap(dangNhap dn)
         {
             this.user = dn.user;

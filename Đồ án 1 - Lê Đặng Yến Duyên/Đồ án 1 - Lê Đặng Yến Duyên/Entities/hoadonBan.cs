@@ -14,6 +14,7 @@ namespace HoaDonBan.Entities
         public int thanhTien { get => thanhTien; set => thanhTien = value; }
         public int cKhau { get => ckhau; set => ckhau = value; }
         public DateTime ngayBan { get => ngayban; set => ngayban = value; }
+        public hoadonBan() { }
         public hoadonBan(hoadonBan hdb)
         {
             this.mahdb = hdb.mahdb;

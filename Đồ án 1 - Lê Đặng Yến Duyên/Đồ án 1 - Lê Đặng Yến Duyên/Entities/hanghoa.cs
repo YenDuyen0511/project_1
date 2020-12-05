@@ -13,6 +13,7 @@ namespace HangHoa.Entities
         public string maLoai { get => maloai; set => maloai = value; }
         public int slgnhap { get => slgNhap; set => slgNhap = value; }
         public int slgco { get => slgCo; set => slgCo = value; }
+        public hanghoa() { }
         public hanghoa(hanghoa hh)
         {
             this.mahang = hh.mahang;

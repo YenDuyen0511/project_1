@@ -14,6 +14,7 @@ namespace GiaBan.Entities
         public int Gia { get => gia; set => gia = value; }
         public DateTime ngayad { get => ngayAD; set => ngayAD = value; }
         public DateTime ngaykt { get => ngayKT; set => ngayKT = value; }
+        public giaban() { }
         public giaban(giaban gb)
         {
             this.mahang = gb.mahang;

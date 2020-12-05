@@ -11,6 +11,7 @@ namespace NCC.Entities
         public string tenNcc { get => tenncc; set => tenncc= value; }
         public string dChi { get => dchi; set => dchi = value; }
         public string SDT { get => sdt; set => sdt = value; }
+        public ncc() { }
         public ncc(ncc cc)
         {
             this.mancc = cc.mancc;
