@@ -63,46 +63,5 @@ namespace HangHoa.Presentation
                 Console.WriteLine("Khong ton tai ma hang nay");
             }
         }
-        public void Menu()
-        {
-            do
-            {
-                Console.Clear();
-                Console.WriteLine("*****************************************");
-                Console.WriteLine("|     QUAN LI THONG TIN LOAI HANG       |");
-                Console.WriteLine("|        F1: Nhap hang hoa              |");
-                Console.WriteLine("|        F2: Sua hang hoa               |");
-                Console.WriteLine("|        F3: Xoa hang hoa               |");
-                Console.WriteLine("|        F4: Hien danh sach             |");
-                Console.WriteLine("|        F5: Tim kiem                   |");
-                Console.WriteLine("|        F6: Thoat                      |");
-                Console.WriteLine("*****************************************");
-                ConsoleKeyInfo kt = Console.ReadKey();
-                switch (kt.Key)
-                {
-                    case ConsoleKey.F1:
-                        Nhap();
-                        Hien();
-                        Console.WriteLine("Nhap phim bat ki de tiep tuc...");
-                        Console.ReadKey();
-                        break;
-                    case ConsoleKey.F4:
-                        Hien();
-                        Console.WriteLine("Nhap phim bat ki de tiep tuc...");
-                        Console.ReadKey();
-                        break;
-                    case ConsoleKey.F2:
-                        Sua();
-                        Hien();
-                        Console.WriteLine("Nhap phim bat ki de tiep tuc...");
-                        Console.ReadKey();
-                        break;
-                    case ConsoleKey.F6:
-                        Program2.Menu();
-                        break;
-                }
-            }
-            while (true);
-        }
     }
 }
