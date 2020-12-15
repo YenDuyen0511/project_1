@@ -7,11 +7,12 @@ namespace HoaDonBan.Entities
     public class hoadonBan
     {
         private string mahdb, manv;
-        private int thanhtien, ckhau;
+        private int thanhtien;
+        private int ckhau;
         private DateTime ngayban;
         public string maHdb { get => mahdb; set => mahdb = value; }
         public string maNv { get => manv; set => manv = value; }
-        public int thanhTien { get => thanhTien; set => thanhTien = value; }
+        public int thanhTien { get => thanhtien; set => thanhtien = value; }
         public int cKhau { get => ckhau; set => ckhau = value; }
         public DateTime ngayBan { get => ngayban; set => ngayban = value; }
         public hoadonBan() { }
@@ -19,7 +20,7 @@ namespace HoaDonBan.Entities
         {
             this.mahdb = hdb.mahdb;
             this.manv = hdb.manv;
-            this.thanhTien = hdb.thanhTien;
+            this.thanhtien = hdb.thanhtien;
             this.ckhau = hdb.ckhau;
             this.ngayban = hdb.ngayban;
         }
@@ -27,7 +28,7 @@ namespace HoaDonBan.Entities
         {
             this.mahdb = mahdb;
             this.manv = manv;
-            this.thanhTien = thanhTien;
+            this.thanhtien = thanhtien;
             this.ckhau = ckhau;
             this.ngayban = ngayban;
         }

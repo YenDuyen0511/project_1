@@ -49,12 +49,12 @@ namespace NCC.Presentation
                 Console.Write("Nhap dia chi moi:");
                 string dchi = Console.ReadLine();
                 if (!string.IsNullOrEmpty(dchi))
-                    cc.dChi = dchi; ;
+                    cc.dChi = dchi;
                 ccBLL.SuaNcc(cc);
                 Console.Write("So dien thoai moi:");
                 string sdt = Console.ReadLine();
                 if (!string.IsNullOrEmpty(sdt))
-                    cc.SDT = sdt; ;
+                    cc.SDT = sdt;
                 ccBLL.SuaNcc(cc);
             }
             else
