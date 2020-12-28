@@ -6,12 +6,12 @@ using DOAN1.DataAccessLayer;
 
 namespace DOAN1.DataAccessLayer
 {
-    class NccDAL : INccDAL
+    class GiaBanDAL : IGiaBanDAL
     {
-        private string txtfile = "Data/Ncc.txt";
-        public List<ncc> GetAllNcc()
+        private string txtfile = "Data/Giaban.txt";
+        public List<giaban> GetAllGiaban()
         {
-            List<ncc> list = new List<ncc>();
+            List<giaban> list = new List<giaban>();
             StreamReader fread = File.OpenText(txtfile);
             string s = fread.ReadLine();
             while (s != null)
@@ -19,26 +19,26 @@ namespace DOAN1.DataAccessLayer
                 if (s != "")
                 {
                     string[] a = s.Split('#');
-                    list.Add(new ncc(a[0], a[1], a[2], a[3]));
+                    list.Add(new giaban(a[0], a[1], int.Parse(a[2]), DateTime.Parse(a[3]), DateTime.Parse(a[4])));
                 }
                 s = fread.ReadLine();
             }
             fread.Close();
             return list;
         }
-        public void ThemNcc(ncc cc)
+        public void Themgiaban(giaban gb)
         {
-            string mancc = "MN" + DateTime.Now.ToString("yyMMddhhmmss");
+            string magb = "MN" + DateTime.Now.ToString("yyMMddhhmmss");
             StreamWriter fwrite = File.AppendText(txtfile);
             fwrite.WriteLine();
-            fwrite.Write(mancc + "#" + cc.tenNcc + "#" + cc.dChi + "#" + cc.SDT);
+            fwrite.Write(magb + "#" + gb.donvi + "#" + gb.Gia + "#" + gb.ngayad + "#" + gb.ngaykt);
             fwrite.Close();
         }
-        public void Update(List<ncc> list)
+        public void Update(List<giaban> list)
         {
             StreamWriter fwrite = File.CreateText(txtfile);
             for (int i = 0; i < list.Count; i++)
-                fwrite.WriteLine(list[i].maNcc + "#" + list[i].tenNcc + "#" + list[i].dChi + "#" + list[i].SDT);
+                fwrite.WriteLine(list[i].maHang + "#" + list[i].donvi + "#" + list[i].Gia + "#" + list[i].ngayad + "#" + list[i].ngaykt);
             fwrite.Close();
         }
     }

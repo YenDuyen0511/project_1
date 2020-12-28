@@ -15,8 +15,8 @@ namespace DOAN1.Presentation
             Console.Clear();
             Console.WriteLine("NHAP THONG TIN LOAI HANG");
             loaihang lh = new loaihang();
-            Console.Write("Nhap ten loai hang"); lh.tenLoai = Console.ReadLine();
-            Console.Write("Nhap mau sac:"); lh.mauSac = Console.ReadLine();
+            Console.Write("Nhap ten loai hang: "); lh.tenLoai = Console.ReadLine();
+            Console.Write("Nhap mau sac: "); lh.mauSac = Console.ReadLine();
             lhBLL.ThemLoaihang(lh);
         }
         public void Hien()
@@ -55,6 +55,24 @@ namespace DOAN1.Presentation
             else
             {
                 Console.WriteLine("Khong ton tai ma loai nay");
+            }
+        }
+        public void xoa()
+        {
+            Console.Clear();
+            Console.WriteLine("XOA THONG TIN LOAI HANG ");
+            List<loaihang> list = lhBLL.GetAllLoaihang();
+            string ma;
+            Console.Write("Nhap ma loai hang can xoa:");
+            ma = Console.ReadLine();
+            int i = 0;
+            for (i = 0; i < list.Count; ++i)
+                if (list[i].maLoai == ma) break;
+
+            if (i < list.Count)
+            {
+                loaihang lh = new loaihang(list[i]);
+                lhBLL.XoaLoaihang(ma);
             }
         }
     }

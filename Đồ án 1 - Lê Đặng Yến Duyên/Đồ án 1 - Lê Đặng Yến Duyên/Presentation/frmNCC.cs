@@ -62,5 +62,23 @@ namespace DOAN1.Presentation
                 Console.WriteLine("Khong ton tai ma nay");
             }
         }
+        public void xoa()
+        {
+            Console.Clear();
+            Console.WriteLine("XOA THONG TIN NHA CUNG CAP ");
+            List<ncc> list = ccBLL.GetAllNcc();
+            string ma;
+            Console.Write("Nhap ma nha cung cap can xoa:");
+            ma = Console.ReadLine();
+            int i = 0;
+            for (i = 0; i < list.Count; ++i)
+                if (list[i].maNcc == ma) break;
+
+            if (i < list.Count)
+            {
+                ncc cc = new ncc(list[i]);
+                ccBLL.XoaNcc(ma);
+            }
+        }
     }
 }

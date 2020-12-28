@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using DOAN1.Entities;
-using DOAN1.Ultity;
 
 
 namespace DOAN1.BusinessLayer

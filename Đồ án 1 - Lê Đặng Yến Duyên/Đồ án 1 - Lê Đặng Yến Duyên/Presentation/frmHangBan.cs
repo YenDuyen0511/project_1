@@ -56,5 +56,23 @@ namespace DOAN1.Presentation
                 Console.WriteLine("Khong ton tai ma nay");
             }
         }
+        public void xoa()
+        {
+            Console.Clear();
+            Console.WriteLine("XOA THONG TIN HANG BAN ");
+            List<hangBan> list = hbBLL.GetAllHangban();
+            string ma;
+            Console.Write("Nhap ma hang ban can xoa:");
+            ma = Console.ReadLine();
+            int i = 0;
+            for (i = 0; i < list.Count; ++i)
+                if (list[i].maHb == ma) break;
+
+            if (i < list.Count)
+            {
+                hangBan hb = new hangBan(list[i]);
+                hbBLL.XoaHangban(ma);
+            }
+        }
     }
 }

@@ -63,5 +63,23 @@ namespace DOAN1.Presentation
                 Console.WriteLine("Khong ton tai ma nay");
             }
         }
+        public void xoa()
+        {
+            Console.Clear();
+            Console.WriteLine("XOA THONG TIN HOA DON BAN ");
+            List<hoadonBan> list = hdbBLL.GetAllHoaDonban();
+            string ma;
+            Console.Write("Nhap ma hoa don ban can xoa:");
+            ma = Console.ReadLine();
+            int i = 0;
+            for (i = 0; i < list.Count; ++i)
+                if (list[i].maHdb == ma) break;
+
+            if (i < list.Count)
+            {
+                hoadonBan hdb = new hoadonBan(list[i]);
+                hdbBLL.XoaHoaDonban(ma);
+            }
+        }
     }
 }
