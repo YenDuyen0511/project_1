@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Loaihang.Entities;
+using DOAN1.Entities;
 
-namespace Loaihang.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public interface ILoaiHangBLL
     {

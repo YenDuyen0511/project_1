@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Loaihang.BusinessLayer;
-using Loaihang.Entities;
+using DOAN1.BusinessLayer;
+using DOAN1.Entities;
 
-namespace Loaihang.Presentation
+namespace DOAN1.Presentation
 {
     public class frmLoaiHang
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NCC.Entities;
+using DOAN1.Entities;
 
-namespace NCC.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     public interface INccDAL
     {

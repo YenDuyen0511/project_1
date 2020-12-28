@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangBan.Entities;
+using DOAN1.Entities;
 
-namespace HangBan.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     public interface IHangBanDAL
     {

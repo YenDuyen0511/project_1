@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NhanVien.Entities;
+using DOAN1.Entities;
 
-namespace NhanVien.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     class NhanVienDAL : INhanVienDAL
     {

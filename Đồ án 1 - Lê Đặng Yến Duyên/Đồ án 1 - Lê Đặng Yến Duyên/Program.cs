@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Loaihang.Presentation;
-using HangHoa.Presentation;
-using NCC.Presentation;
-using NhanVien.Presentation;
+using DOAN1.Presentation;
 
 namespace Đồ_án_1___Lê_Đặng_Yến_Duyên
 {

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NCC.Entities;
+using DOAN1.Entities;
+using DOAN1.Ultity;
 
 
-namespace NCC.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public interface INccBLL
     {

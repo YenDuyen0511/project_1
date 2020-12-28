@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangHoa.Entities;
+using DOAN1.Entities;
 
-namespace HangHoa.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public interface IHangHoaBLL
     {

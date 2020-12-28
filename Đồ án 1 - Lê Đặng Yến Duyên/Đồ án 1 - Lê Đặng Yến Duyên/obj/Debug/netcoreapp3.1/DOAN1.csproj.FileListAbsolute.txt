@@ -1,0 +1,4 @@
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\DOAN1.csprojAssemblyReference.cache
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\DOAN1.AssemblyInfoInputs.cache
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\DOAN1.AssemblyInfo.cs
+D:\project_1\project_1\Đồ án 1 - Lê Đặng Yến Duyên\Đồ án 1 - Lê Đặng Yến Duyên\obj\Debug\netcoreapp3.1\DOAN1.csproj.CoreCompileInputs.cache

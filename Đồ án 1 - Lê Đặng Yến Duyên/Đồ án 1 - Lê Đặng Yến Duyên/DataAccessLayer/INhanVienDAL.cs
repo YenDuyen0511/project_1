@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NhanVien.Entities;
+using DOAN1.Entities;
 
-namespace NhanVien.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     public interface INhanVienDAL
     {

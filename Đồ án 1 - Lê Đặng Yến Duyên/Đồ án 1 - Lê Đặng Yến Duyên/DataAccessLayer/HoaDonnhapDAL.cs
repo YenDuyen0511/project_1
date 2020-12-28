@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HoaDonNhap.Entities;
+using DOAN1.Entities;
 
-namespace HoaDonNhap.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     class HoaDonnhapDAL : IHoaDonnhapDAL
     {

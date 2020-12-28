@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HoaDonBan.Entities;
-using HoaDonBan.BusinessLayer;
+using DOAN1.Entities;
+using DOAN1.BusinessLayer;
 
-namespace HoaDonBan.Presentation
+namespace DOAN1.Presentation
 {
     public class frmHoaDonBan
     {

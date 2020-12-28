@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HoaDonBan.Entities
+namespace DOAN1.Entities
 {
     public class hoadonBan
     {

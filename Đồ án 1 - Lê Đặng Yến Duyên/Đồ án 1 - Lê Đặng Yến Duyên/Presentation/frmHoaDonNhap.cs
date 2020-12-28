@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HoaDonNhap.Entities;
-using HoaDonNhap.BusinessLayer;
+using DOAN1.Entities;
+using DOAN1.BusinessLayer;
 
-namespace HoaDonNhap.Presentation
+namespace DOAN1.Presentation
 {
     public class frmHoaDonNhap
     {

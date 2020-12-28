@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangBan.Entities;
-using HangBan.DataAccessLayer;
+using DOAN1.Entities;
+using DOAN1.DataAccessLayer;
 
-namespace HangBan.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     class HangBanBLL : IHangBanBLL
     {

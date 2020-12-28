@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangBan.Entities;
-using HangBan.BusinessLayer;
+using DOAN1.Entities;
+using DOAN1.BusinessLayer;
 
-namespace HangBan.Presentation
+namespace DOAN1.Presentation
 {
     public class frmHangBan
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NCC.Entities;
-using NCC.DataAccessLayer;
+using DOAN1.Entities;
+using DOAN1.DataAccessLayer;
 
-namespace NCC.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public class NccBLL :INccBLL
     {

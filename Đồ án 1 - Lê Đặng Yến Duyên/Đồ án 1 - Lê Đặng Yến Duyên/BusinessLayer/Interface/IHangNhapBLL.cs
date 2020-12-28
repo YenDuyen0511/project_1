@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangNhap.Entities;
+using DOAN1.Entities;
 
-namespace HangNhap.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public interface IHangNhapBLL
     {

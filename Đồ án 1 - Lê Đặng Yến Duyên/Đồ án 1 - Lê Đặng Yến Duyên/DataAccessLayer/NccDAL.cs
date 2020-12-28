@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NCC.Entities;
+using DOAN1.Entities;
+using DOAN1.Ultity;
+using DOAN1.DataAccessLayer;
 
-namespace NCC.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     class NccDAL : INccDAL
     {

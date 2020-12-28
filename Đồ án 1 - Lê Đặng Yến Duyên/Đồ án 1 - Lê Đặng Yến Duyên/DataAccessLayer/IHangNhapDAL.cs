@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangNhap.Entities;
+using DOAN1.Entities;
 
-namespace HangNhap.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     public interface IHangNhapDAL
     {

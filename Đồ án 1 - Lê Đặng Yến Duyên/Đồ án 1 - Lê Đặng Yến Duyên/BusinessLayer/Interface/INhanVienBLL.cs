@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NhanVien.Entities;
+using DOAN1.Entities;
 
-namespace NhanVien.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public interface INhanVienBLL
     {

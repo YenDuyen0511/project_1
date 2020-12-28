@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangBan.Entities;
+using DOAN1.Entities;
 
-namespace HangBan.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public interface IHangBanBLL
     {

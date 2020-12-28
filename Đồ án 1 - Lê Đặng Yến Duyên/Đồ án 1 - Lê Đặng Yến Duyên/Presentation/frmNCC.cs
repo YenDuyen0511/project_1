@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NCC.Entities;
-using NCC.BusinessLayer;
+using DOAN1.Entities;
+using DOAN1.BusinessLayer;
 
-namespace NCC.Presentation
+namespace DOAN1.Presentation
 {
     public class frmNCC
     {

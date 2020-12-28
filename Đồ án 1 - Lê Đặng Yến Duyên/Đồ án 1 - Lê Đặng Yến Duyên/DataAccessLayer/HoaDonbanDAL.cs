@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HoaDonBan.Entities;
+using DOAN1.Entities;
 
-namespace HoaDonBan.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     class HoaDonbanDAL : IHoaDonbanDAL
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NhanVien.Entities;
-using NhanVien.BusinessLayer;
+using DOAN1.Entities;
+using DOAN1.BusinessLayer;
 
-namespace NhanVien.Presentation
+namespace DOAN1.Presentation
 {
     public class frmNhanVien
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HoaDonBan.Entities;
-using HoaDonBan.DataAccessLayer;
+using DOAN1.Entities;
+using DOAN1.DataAccessLayer;
 
-namespace HoaDonBan.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     class HoaDonBanBLL : IHoaDonBanBLL
     {

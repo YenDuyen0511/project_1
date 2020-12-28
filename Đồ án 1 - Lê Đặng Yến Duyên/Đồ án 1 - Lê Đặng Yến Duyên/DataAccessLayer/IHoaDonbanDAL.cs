@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HoaDonBan.Entities;
+using DOAN1.Entities;
 
-namespace HoaDonBan.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     public interface IHoaDonbanDAL
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangHoa.Entities;
-using HangHoa.DataAccessLayer;
+using DOAN1.Entities;
+using DOAN1.DataAccessLayer;
 
-namespace HangHoa.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public class HangHoaBLL : IHangHoaBLL
     {

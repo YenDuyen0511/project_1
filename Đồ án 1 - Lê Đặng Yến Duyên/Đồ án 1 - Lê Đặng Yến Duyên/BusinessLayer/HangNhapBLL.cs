@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HangNhap.Entities;
-using HangNhap.DataAccessLayer;
+using DOAN1.Entities;
+using DOAN1.DataAccessLayer;
 
-namespace HangNhap.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     class HangNhapBLL : IHangNhapBLL
     {

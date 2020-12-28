@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using NhanVien.Entities;
-using NhanVien.DataAccessLayer;
+using DOAN1.Entities;
+using DOAN1.DataAccessLayer;
 
-namespace NhanVien.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public class NhanVienBLL : INhanVienBLL
     {

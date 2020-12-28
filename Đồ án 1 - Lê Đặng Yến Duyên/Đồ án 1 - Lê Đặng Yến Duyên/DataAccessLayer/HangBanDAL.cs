@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HangBan.Entities;
+using DOAN1.Entities;
 
 
-namespace HangBan.DataAccessLayer
+namespace DOAN1.DataAccessLayer
 {
     class HangBanDAL : IHangBanDAL
     {

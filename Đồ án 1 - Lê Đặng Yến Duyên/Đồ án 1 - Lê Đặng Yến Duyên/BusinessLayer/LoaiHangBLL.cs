@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Loaihang.Entities;
-using LoaiHang.DataAccessLayer;
+using DOAN1.Entities;
+using DOAN1.DataAccessLayer;
 
-namespace Loaihang.BusinessLayer
+namespace DOAN1.BusinessLayer
 {
     public class LoaiHangBLL : ILoaiHangBLL
     {
